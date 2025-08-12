@@ -1,5 +1,6 @@
 import CreatePost from "@/components/CreatePost";
 import { Button } from "@/components/ui/button";
+import WhoToFollow from "@/components/WhoToFollow";
 import { SignedOut, SignInButton, SignUpButton, SignedIn, UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
@@ -12,7 +13,7 @@ export default async function Home() {
         {user ? <CreatePost /> : null}
       </div>
       <div className="hidden lg:block lg:grid-cols-4 sticky top-20">
-        {/* <WhoToFollow /> */}
+        <WhoToFollow />
       </div>
     </div>
   );
